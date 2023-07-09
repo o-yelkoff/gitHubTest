@@ -12,6 +12,7 @@ public class IssueCreatePage extends BasePage {
     public By submitButton = By.xpath("//div[@class = 'Layout-main']//button[@type='submit']");
     public By closeIssueButton = By.xpath("//div[@class = 'discussion-timeline-actions']//button[@name='comment_and_close']");
     public By issueTab = By.id("issues-tab");
+    public By deleteNotification = By.xpath("//div[@id = 'js-flash-container']//div[@role = 'alert']");
 
     public IssueCreatePage(WebDriver driver) {
         super(driver);
@@ -34,6 +35,10 @@ public class IssueCreatePage extends BasePage {
         webDriverWait.until(elementToBeClickable(driver.findElement(issueTab)));
         driver.findElement(issueTab).click();
         return new IssuePage(driver);
+    }
+    public boolean issueDeletingNotification(){
+        webDriverWait.until(elementToBeClickable(driver.findElement(deleteNotification)));
+        return driver.findElement(deleteNotification).isDisplayed();
     }
 }
 

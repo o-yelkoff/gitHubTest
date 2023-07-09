@@ -16,6 +16,8 @@ public class IssuePage extends BasePage{
     By issueList = By.xpath("//div[@class= 'js-navigation-container js-active-navigation-container']");
     By searchField = By.xpath("//input[@id = 'js-issues-search']");
 
+    By searchResult = By.xpath("//a[contains(@id, 'issue_')]");
+
     public IssuePage (WebDriver driver){
         super(driver);
     }
@@ -42,5 +44,15 @@ public class IssuePage extends BasePage{
         int size = elements.size();
         System.out.println("Amount of issues = " + size);
         return size;
+    }
+    public IssueDeletePage closeIssue (String s) throws InterruptedException {
+        driver.findElement(searchField).isDisplayed();
+        driver.findElement(searchField).sendKeys(Keys.CONTROL + "a");
+        driver.findElement(searchField).sendKeys(Keys.DELETE);
+        driver.findElement(searchField).sendKeys(s);
+        driver.findElement(searchField).sendKeys(Keys.ENTER);
+        driver.findElement(searchResult).isDisplayed();
+        driver.findElement(searchResult).click();
+        return new IssueDeletePage(driver);
     }
 }
