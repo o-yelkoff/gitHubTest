@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class GitHubAUTTest extends BaseTest{
+public class GitHubAUTTest extends BaseTest {
     @Test
-    public void goToIssiePageTest () throws InterruptedException {
+    public void goToIssiePageTest() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
         LoginPage loginPage = homePage.goToLoginPage();
         MainPage mainPage = loginPage.loginSuccessful("o-yelkoff", "autTest123!");
@@ -20,7 +20,9 @@ public class GitHubAUTTest extends BaseTest{
         Assertions.assertTrue(issueCreatePage.issueCreatePageIsOpen());
 
     }
-    @Test void createNewIssueTest () throws InterruptedException {
+
+    @Test
+    void createNewIssueTest() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
         LoginPage loginPage = homePage.goToLoginPage();
         MainPage mainPage = loginPage.loginSuccessful("o-yelkoff", "autTest123!");
@@ -30,14 +32,16 @@ public class GitHubAUTTest extends BaseTest{
         Assertions.assertTrue(issuePage.isPageOpened());
         IssueCreatePage issueCreatePage = issuePage.goToIssueCreatePage();
         String s = "GitTest " + System.currentTimeMillis();
-        IssueCreatePage issueCreatePage1 = issueCreatePage.createNewIssue(s, "GitTest, my first issur create" );
+        IssueCreatePage issueCreatePage1 = issueCreatePage.createNewIssue(s, "GitTest, my first issue create");
         Assertions.assertTrue(issueCreatePage1.newIssueIsCreated());
         issueCreatePage.goBackToIssuePage();
         Assertions.assertTrue(issuePage.isPageOpened());
         int issueAmount = issuePage.getIssueAmount(s);
-        Assertions.assertTrue(1==issueAmount);
+        Assertions.assertTrue(1 == issueAmount);
     }
-    @Test void deleteIssueTest () throws InterruptedException {
+
+    @Test
+    void deleteIssueTest() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
         LoginPage loginPage = homePage.goToLoginPage();
         MainPage mainPage = loginPage.loginSuccessful("o-yelkoff", "autTest123!");
@@ -47,7 +51,7 @@ public class GitHubAUTTest extends BaseTest{
         Assertions.assertTrue(issuePage.isPageOpened());
         IssueCreatePage issueCreatePage = issuePage.goToIssueCreatePage();
         String s = "GitTest " + System.currentTimeMillis();
-        IssueCreatePage issueCreatePage1 = issueCreatePage.createNewIssue(s, "GitTest, my first issur create" );
+        IssueCreatePage issueCreatePage1 = issueCreatePage.createNewIssue(s, "GitTest, my first issue create");
         Assertions.assertTrue(issueCreatePage1.newIssueIsCreated());
         issueCreatePage.goBackToIssuePage();
         Assertions.assertTrue(issuePage.isPageOpened());
@@ -55,7 +59,6 @@ public class GitHubAUTTest extends BaseTest{
         Assertions.assertTrue(issueDeletePage.issueDeletePageIsOpened());
         issueDeletePage.deletingIssue();
         Assertions.assertTrue(issueCreatePage.issueDeletingNotification());
-        Thread.sleep(5000);
     }
 
 }
