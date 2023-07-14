@@ -17,8 +17,6 @@ public class GitHubAUTTest extends BaseTest{
         Assertions.assertTrue(repositoryPage.isPageOpened());
         IssuePage issuePage = repositoryPage.goToIssuePage();
         Assertions.assertTrue(issuePage.isPageOpened());
-        Thread.sleep(5000);
-
     }
 
 }
