@@ -12,8 +12,8 @@ import java.util.List;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 public class IssuePage extends BasePage{
-    By newIssueButton = By.xpath("//*[@id='repo-content-turbo-frame']//a[contains( @href, 'issues/new/choose')]");
-    By issueList = By.xpath("//div[@class= 'js-navigation-container js-active-navigation-container']");
+    private By newIssueButton = By.xpath("//*[@id='repo-content-turbo-frame']//a[contains( @href, 'issues/new/choose')]");
+    private By issueList = By.xpath("//div[@class= 'js-navigation-container js-active-navigation-container']");
     By searchField = By.xpath("//input[@id = 'js-issues-search']");
 
     By searchResult = By.xpath("//a[contains(@id, 'issue_')]");
@@ -36,7 +36,6 @@ public class IssuePage extends BasePage{
         driver.findElement(searchField).sendKeys(Keys.DELETE);
         driver.findElement(searchField).sendKeys(s);
         driver.findElement(searchField).sendKeys(Keys.ENTER);
-        Thread.sleep(5000);
 
         WebElement element = driver.findElement(issueList);
         List<WebElement> elements = element.findElements(By.xpath("./*"));

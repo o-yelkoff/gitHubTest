@@ -37,7 +37,7 @@ public class GitHubAUTTest extends BaseTest {
         issueCreatePage.goBackToIssuePage();
         Assertions.assertTrue(issuePage.isPageOpened());
         int issueAmount = issuePage.getIssueAmount(s);
-        Assertions.assertTrue(1 == issueAmount);
+        Assertions.assertEquals(1, issueAmount);
     }
 
     @Test

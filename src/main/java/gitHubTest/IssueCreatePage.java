@@ -7,7 +7,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClick
 
 public class IssueCreatePage extends BasePage {
 
-    public By issueTitle = By.xpath("//div[@class = 'Layout-main']//input[@name='issue[title]']");
+    private By issueTitle = By.xpath("//div[@class = 'Layout-main']//input[@name='issue[title]']");
     public By issueComment = By.xpath("//div[@class = 'Layout-main']//textarea[@id='issue_body']");
     public By submitButton = By.xpath("//div[@class = 'Layout-main']//button[@type='submit']");
     public By closeIssueButton = By.xpath("//div[@class = 'discussion-timeline-actions']//button[@name='comment_and_close']");
@@ -28,15 +28,18 @@ public class IssueCreatePage extends BasePage {
         driver.findElement(submitButton).click();
         return new IssueCreatePage(driver);
     }
+
     public boolean newIssueIsCreated() {
         return driver.findElement(closeIssueButton).isDisplayed();
     }
-    public IssuePage goBackToIssuePage () {
+
+    public IssuePage goBackToIssuePage() {
         webDriverWait.until(elementToBeClickable(driver.findElement(issueTab)));
         driver.findElement(issueTab).click();
         return new IssuePage(driver);
     }
-    public boolean issueDeletingNotification(){
+
+    public boolean issueDeletingNotification() {
         webDriverWait.until(elementToBeClickable(driver.findElement(deleteNotification)));
         return driver.findElement(deleteNotification).isDisplayed();
     }
