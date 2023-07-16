@@ -1,8 +1,10 @@
 package gitHubTest;
 
+import helpers.Level;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static helpers.logColorPrinter.printColorMessage;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 public class HomePage extends BasePage{
@@ -16,6 +18,7 @@ public class HomePage extends BasePage{
     public LoginPage goToLoginPage() {
         webDriverWait.until(elementToBeClickable(driver.findElement(signInButtonLocator)));
         driver.findElement(signInButtonLocator).click();
+        printColorMessage("User is on Login page", logger, Level.DEBUG);
         return new LoginPage(driver);
     }
 }

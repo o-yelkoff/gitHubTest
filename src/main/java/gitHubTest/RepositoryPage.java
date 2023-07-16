@@ -1,8 +1,11 @@
 package gitHubTest;
 
+import helpers.Level;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import static helpers.logColorPrinter.printColorMessage;
 
 public class RepositoryPage extends BasePage{
     By codeButton = By.xpath("//div[@class='Layout-main']//span[@class ='Button-label']");
@@ -17,6 +20,7 @@ public class RepositoryPage extends BasePage{
     public IssuePage goToIssuePage (){
         Assertions.assertTrue(driver.findElement(issueTab).isDisplayed());
         driver.findElement(issueTab).click();
+        printColorMessage("The user is back to Issue page", logger, Level.DEBUG);
         return new IssuePage(driver);
     }
 }

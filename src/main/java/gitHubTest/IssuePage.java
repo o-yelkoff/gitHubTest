@@ -1,5 +1,6 @@
 package gitHubTest;
 
+import helpers.Level;
 import net.bytebuddy.implementation.bytecode.Throw;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
@@ -9,6 +10,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
+import static helpers.logColorPrinter.printColorMessage;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 public class IssuePage extends BasePage{
@@ -29,6 +31,7 @@ public class IssuePage extends BasePage{
     public IssueCreatePage goToIssueCreatePage() {
         webDriverWait.until(elementToBeClickable(driver.findElement(newIssueButton)));
         driver.findElement(newIssueButton).click();
+        printColorMessage("User is on the Issue page", logger, Level.DEBUG);
         return new IssueCreatePage(driver);
     }
     public int getIssueAmount (String s) throws InterruptedException {
@@ -53,6 +56,7 @@ public class IssuePage extends BasePage{
         driver.findElement(searchField).sendKeys(Keys.ENTER);
         driver.findElement(searchResult).isDisplayed();
         driver.findElement(searchResult).click();
+        printColorMessage("User successfully  close the issue", logger, Level.DEBUG);
         return new IssueDeletePage(driver);
     }
 }

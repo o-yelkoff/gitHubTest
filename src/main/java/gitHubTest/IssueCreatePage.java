@@ -1,8 +1,10 @@
 package gitHubTest;
 
+import helpers.Level;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static helpers.logColorPrinter.printColorMessage;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 public class IssueCreatePage extends BasePage {
@@ -27,6 +29,7 @@ public class IssueCreatePage extends BasePage {
         driver.findElement(issueTitle).sendKeys(title);
         driver.findElement(issueComment).sendKeys(comment);
         driver.findElement(submitButton).click();
+        printColorMessage("New issue is successfully  created", logger, Level.DEBUG);
         return new IssueCreatePage(driver);
     }
 
@@ -37,6 +40,7 @@ public class IssueCreatePage extends BasePage {
     public IssuePage goBackToIssuePage() {
         webDriverWait.until(elementToBeClickable(driver.findElement(issueTab)));
         driver.findElement(issueTab).click();
+        printColorMessage("User is on the Issue page", logger, Level.DEBUG);
         return new IssuePage(driver);
     }
 

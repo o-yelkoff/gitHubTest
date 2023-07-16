@@ -34,7 +34,7 @@ public class LoginPage extends BasePage{
         driver.findElement(passwordFieldLocator).sendKeys(password);
         driver.findElement(signInButtonLocator).click();
         logger.info("Successful authorization");
-        printColorMessage("Test log in", logger, Level.INFO);
+        printColorMessage("User successfully  log in", logger, Level.DEBUG);
         return new MainPage(driver);
     }
 
@@ -42,6 +42,7 @@ public class LoginPage extends BasePage{
         driver.findElement(loginFieldLocator).sendKeys(login);
         driver.findElement(passwordFieldLocator).sendKeys(password);
         driver.findElement(signInButtonLocator).click();
+        printColorMessage("User successfully  log out", logger, Level.DEBUG);
         return this;
     }
 }

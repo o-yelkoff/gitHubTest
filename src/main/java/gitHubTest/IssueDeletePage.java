@@ -1,8 +1,10 @@
 package gitHubTest;
 
+import helpers.Level;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static helpers.logColorPrinter.printColorMessage;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 public class IssueDeletePage extends BasePage {
@@ -20,6 +22,7 @@ public class IssueDeletePage extends BasePage {
     public IssueCreatePage deletingIssue(){
         driver.findElement(deleteIssueButton).click();
         driver.findElement(deletePopUpButton).click();
+        printColorMessage("Issue is successfully  deleted", logger, Level.DEBUG);
         return new IssueCreatePage(driver);
     }
 
