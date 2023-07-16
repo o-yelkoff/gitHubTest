@@ -29,7 +29,7 @@ public class MainPage extends BasePage{
     public  RepositoryPage goToRepositoryPage(){
         //Assertions.assertTrue(driver.findElement(qaAutoLocator).isDisplayed());
         driver.findElement(qaAutoLocator).click();
-        printColorMessage("The user is on the Repository page", logger, Level.DEBUG);
+        printColorMessage("The user is redirecting on the Repository page", logger, Level.DEBUG);
         return  new RepositoryPage(driver);
     }
 }

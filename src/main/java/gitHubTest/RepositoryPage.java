@@ -20,7 +20,7 @@ public class RepositoryPage extends BasePage{
     public IssuePage goToIssuePage (){
         Assertions.assertTrue(driver.findElement(issueTab).isDisplayed());
         driver.findElement(issueTab).click();
-        printColorMessage("The user is back to Issue page", logger, Level.DEBUG);
+        printColorMessage("The user is go back to Issue page", logger, Level.DEBUG);
         return new IssuePage(driver);
     }
 }

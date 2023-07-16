@@ -46,6 +46,7 @@ public class IssuePage extends BasePage{
 
         int size = elements.size();
         System.out.println("Amount of issues = " + size);
+        printColorMessage("The quantity of issue was counted", logger, Level.DEBUG);
         return size;
     }
     public IssueDeletePage closeIssue (String s) throws InterruptedException {
@@ -56,7 +57,7 @@ public class IssuePage extends BasePage{
         driver.findElement(searchField).sendKeys(Keys.ENTER);
         driver.findElement(searchResult).isDisplayed();
         driver.findElement(searchResult).click();
-        printColorMessage("User successfully  close the issue", logger, Level.DEBUG);
+        printColorMessage("User successfully close the issue", logger, Level.DEBUG);
         return new IssueDeletePage(driver);
     }
 }

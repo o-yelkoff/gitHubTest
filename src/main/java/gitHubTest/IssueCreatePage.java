@@ -40,12 +40,13 @@ public class IssueCreatePage extends BasePage {
     public IssuePage goBackToIssuePage() {
         webDriverWait.until(elementToBeClickable(driver.findElement(issueTab)));
         driver.findElement(issueTab).click();
-        printColorMessage("User is on the Issue page", logger, Level.DEBUG);
+        printColorMessage("User is go back on the Issue page", logger, Level.DEBUG);
         return new IssuePage(driver);
     }
 
     public boolean issueDeletingNotification() {
         webDriverWait.until(elementToBeClickable(driver.findElement(deleteNotification)));
+        printColorMessage("Deleting notification was found on the page", logger, Level.DEBUG);
         return driver.findElement(deleteNotification).isDisplayed();
     }
 }

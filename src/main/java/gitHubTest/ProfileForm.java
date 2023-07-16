@@ -27,7 +27,7 @@ public class ProfileForm extends BasePage{
     public RepositoriesPage goToRepositoriesPage() {
         Assertions.assertTrue(driver.findElement(yourRepositButtonLocator).isDisplayed());
         driver.findElement(yourRepositButtonLocator).click();
-        printColorMessage("The user is on the Repositories page", logger, Level.DEBUG);
+        printColorMessage("The user is navigate to the Repositories page", logger, Level.DEBUG);
         return new RepositoriesPage(driver);
     }
 
