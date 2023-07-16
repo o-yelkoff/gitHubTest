@@ -13,9 +13,10 @@ public class IssueCreatePage extends BasePage {
     public By closeIssueButton = By.xpath("//div[@class = 'discussion-timeline-actions']//button[@name='comment_and_close']");
     public By issueTab = By.id("issues-tab");
     public By deleteNotification = By.xpath("//div[@id = 'js-flash-container']//div[@role = 'alert']");
+    private final static String PAGETITLE = "Issue Create Page";
 
     public IssueCreatePage(WebDriver driver) {
-        super(driver);
+        super(driver, PAGETITLE);
     }
 
     public boolean issueCreatePageIsOpen() {

@@ -8,9 +8,9 @@ import org.openqa.selenium.WebElement;
 public class MainPage extends BasePage{
     By imgLocator = By.xpath("//img[@class='avatar circle'][1]");
     By qaAutoLocator = By.xpath("//body//loading-context//ul//img[@alt='qa_auto']");
-
+    private final static String PAGETITLE = "Main Page";
     public MainPage(WebDriver driver) {
-        super(driver);
+        super(driver, PAGETITLE);
     }
 
     public WebElement getLogoOnTheMainPage() {

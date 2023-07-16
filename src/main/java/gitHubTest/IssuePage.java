@@ -17,9 +17,10 @@ public class IssuePage extends BasePage{
     By searchField = By.xpath("//input[@id = 'js-issues-search']");
 
     By searchResult = By.xpath("//a[contains(@id, 'issue_')]");
+    private final static String PAGETITLE = "Issue Page";
 
     public IssuePage (WebDriver driver){
-        super(driver);
+        super(driver, PAGETITLE);
     }
     public boolean isPageOpened (){
         webDriverWait.until(elementToBeClickable(driver.findElement(newIssueButton)));

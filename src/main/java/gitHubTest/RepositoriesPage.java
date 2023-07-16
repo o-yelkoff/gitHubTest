@@ -8,9 +8,9 @@ import java.util.stream.Collectors;
 
 public class RepositoriesPage extends BasePage{
     List<WebElement> repositoriesList = driver.findElements(By.xpath("//a[@itemprop=\"name codeRepository\"]"));
-
+    private final static String PAGETITLE = "Repositories Page";
     public RepositoriesPage(WebDriver driver) {
-        super(driver);
+        super(driver, PAGETITLE);
     }
 
     public List<String> getRepositories() {
