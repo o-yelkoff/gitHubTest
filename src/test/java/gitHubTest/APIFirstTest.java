@@ -15,7 +15,7 @@ import static org.hamcrest.Matchers.*;
 
 public class APIFirstTest extends BaseAPITest {
 
-    private final String API_KEY = "ac3ae531e9fea0c8f439cd51bc5b015e";
+    private String API_KEY = "ac3ae531e9fea0c8f439cd51bc5b015e";
     Map<String, Object> requestBody = new HashMap<>();
 
     @BeforeEach
