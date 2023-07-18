@@ -48,7 +48,7 @@ public class APIFirstTest extends BaseAPITest {
     }
 
     @Test
-    public void checkJsonSchema() {
+    public void checkJsonSchema2() {
         given()
                 .spec(requestSpecification)
                 .contentType(ContentType.JSON)
