@@ -13,7 +13,7 @@ import java.util.List;
 import static helpers.logColorPrinter.printColorMessage;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
-public class IssuePage extends BasePage{
+public class IssuePage extends BasePage {
     private By newIssueButton = By.xpath("//*[@id='repo-content-turbo-frame']//a[contains( @href, 'issues/new/choose')]");
     private By issueList = By.xpath("//div[@class= 'js-navigation-container js-active-navigation-container']");
     By searchField = By.xpath("//input[@id = 'js-issues-search']");
@@ -21,20 +21,23 @@ public class IssuePage extends BasePage{
     By searchResult = By.xpath("//a[contains(@id, 'issue_')]");
     private final static String PAGETITLE = "Issue Page";
 
-    public IssuePage (WebDriver driver){
+    public IssuePage(WebDriver driver) {
         super(driver, PAGETITLE);
     }
-    public boolean isPageOpened (){
+
+    public boolean isPageOpened() {
         webDriverWait.until(elementToBeClickable(driver.findElement(newIssueButton)));
         return driver.findElement(newIssueButton).isDisplayed();
     }
+
     public IssueCreatePage goToIssueCreatePage() {
         webDriverWait.until(elementToBeClickable(driver.findElement(newIssueButton)));
         driver.findElement(newIssueButton).click();
         printColorMessage("User is on the Issue page", logger, Level.DEBUG);
         return new IssueCreatePage(driver);
     }
-    public int getIssueAmount (String s) throws InterruptedException {
+
+    public int getIssueAmount(String s) throws InterruptedException {
         driver.findElement(searchField).isDisplayed();
         driver.findElement(searchField).sendKeys(Keys.CONTROL + "a");
         driver.findElement(searchField).sendKeys(Keys.DELETE);
@@ -49,7 +52,8 @@ public class IssuePage extends BasePage{
         printColorMessage("The quantity of issue was counted", logger, Level.DEBUG);
         return size;
     }
-    public IssueDeletePage closeIssue (String s) throws InterruptedException {
+
+    public IssueDeletePage closeIssue(String s) throws InterruptedException {
         driver.findElement(searchField).isDisplayed();
         driver.findElement(searchField).sendKeys(Keys.CONTROL + "a");
         driver.findElement(searchField).sendKeys(Keys.DELETE);
