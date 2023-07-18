@@ -3,10 +3,13 @@ package gitHubTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.logging.Logger;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GitHubAUTTest extends BaseTest {
+    private static Logger log = Logger.getLogger(GitHubAUTTest.class.getName());
     @Test
     public void goToIssiePageTest() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
@@ -37,7 +40,7 @@ public class GitHubAUTTest extends BaseTest {
         issueCreatePage.goBackToIssuePage();
         Assertions.assertTrue(issuePage.isPageOpened());
         int issueAmount = issuePage.getIssueAmount(s);
-        Assertions.assertEquals(1, issueAmount);
+        Assertions.assertTrue(1 == issueAmount);
     }
 
     @Test
