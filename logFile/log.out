@@ -1,0 +1,57 @@
+22:12:33 16.07.2023 Home page: DEBUG- [0;33mPage object of Home pagegitHubTest.HomePage[0m
+22:12:34 16.07.2023 Home page: DEBUG- [0;33mUser is on Login page[0m
+22:12:34 16.07.2023 Login Page: DEBUG- [0;33mPage object of Login PagegitHubTest.LoginPage[0m
+22:12:36 16.07.2023 Login Page: INFO - Successful authorization
+22:12:36 16.07.2023 Login Page: DEBUG- [0;33mUser successfully  log in[0m
+22:12:36 16.07.2023 Main Page: DEBUG- [0;33mPage object of Main PagegitHubTest.MainPage[0m
+22:12:37 16.07.2023 Main Page: DEBUG- [0;33mThe user is on the Repository page[0m
+22:12:37 16.07.2023 Repository Page: DEBUG- [0;33mPage object of Repository PagegitHubTest.RepositoryPage[0m
+22:12:37 16.07.2023 Repository Page: DEBUG- [0;33mThe user is back to Issue page[0m
+22:12:37 16.07.2023 Issue Page: DEBUG- [0;33mPage object of Issue PagegitHubTest.IssuePage[0m
+22:12:38 16.07.2023 Issue Page: DEBUG- [0;33mUser is on the Issue page[0m
+22:12:38 16.07.2023 Issue Create Page: DEBUG- [0;33mPage object of Issue Create PagegitHubTest.IssueCreatePage[0m
+22:21:58 16.07.2023 Home page: DEBUG- [0;33mPage object of Home pagegitHubTest.HomePage[0m
+22:21:58 16.07.2023 Home page: DEBUG- [0;33mUser is on Login page[0m
+22:21:58 16.07.2023 Login Page: DEBUG- [0;33mPage object of Login PagegitHubTest.LoginPage[0m
+22:22:00 16.07.2023 Login Page: INFO - Successful authorization
+22:22:00 16.07.2023 Login Page: DEBUG- [0;33mUser successfully  log in[0m
+22:22:00 16.07.2023 Main Page: DEBUG- [0;33mPage object of Main PagegitHubTest.MainPage[0m
+22:22:01 16.07.2023 Main Page: DEBUG- [0;33mThe user is redirecting on the Repository page[0m
+22:22:01 16.07.2023 Repository Page: DEBUG- [0;33mPage object of Repository PagegitHubTest.RepositoryPage[0m
+22:22:01 16.07.2023 Repository Page: DEBUG- [0;33mThe user is go back to Issue page[0m
+22:22:02 16.07.2023 Issue Page: DEBUG- [0;33mPage object of Issue PagegitHubTest.IssuePage[0m
+22:22:02 16.07.2023 Issue Page: DEBUG- [0;33mUser is on the Issue page[0m
+22:22:02 16.07.2023 Issue Create Page: DEBUG- [0;33mPage object of Issue Create PagegitHubTest.IssueCreatePage[0m
+22:22:05 16.07.2023 Issue Create Page: DEBUG- [0;33mNew issue is successfully  created[0m
+22:22:05 16.07.2023 Issue Create Page: DEBUG- [0;33mPage object of Issue Create PagegitHubTest.IssueCreatePage[0m
+22:22:05 16.07.2023 Issue Create Page: DEBUG- [0;33mUser is go back on the Issue page[0m
+22:22:05 16.07.2023 Issue Page: DEBUG- [0;33mPage object of Issue PagegitHubTest.IssuePage[0m
+22:22:06 16.07.2023 Issue Page: DEBUG- [0;33mUser successfully close the issue[0m
+22:22:06 16.07.2023 Issue Delete Page: DEBUG- [0;33mPage object of Issue Delete PagegitHubTest.IssueDeletePage[0m
+22:22:08 16.07.2023 Issue Delete Page: DEBUG- [0;33mIssue is successfully  deleted[0m
+22:22:08 16.07.2023 Issue Create Page: DEBUG- [0;33mPage object of Issue Create PagegitHubTest.IssueCreatePage[0m
+22:22:08 16.07.2023 Issue Create Page: DEBUG- [0;33mDeleting notification was found on the page[0m
+22:35:24 16.07.2023 Home page: DEBUG- [0;33mPage object of Home pagegitHubTest.HomePage[0m
+22:35:24 16.07.2023 Home page: DEBUG- [0;33mUser is on Login page[0m
+22:35:24 16.07.2023 Login Page: DEBUG- [0;33mPage object of Login PagegitHubTest.LoginPage[0m
+22:35:25 16.07.2023 Login Page: INFO - Successful authorization
+22:35:25 16.07.2023 Login Page: DEBUG- [0;33mUser successfully  log in[0m
+22:35:25 16.07.2023 Main Page: DEBUG- [0;33mPage object of Main PagegitHubTest.MainPage[0m
+22:35:27 16.07.2023 Main Page: DEBUG- [0;33mThe user is redirecting on the Repository page[0m
+22:35:27 16.07.2023 Repository Page: DEBUG- [0;33mPage object of Repository PagegitHubTest.RepositoryPage[0m
+22:35:27 16.07.2023 Repository Page: DEBUG- [0;33mThe user is go back to Issue page[0m
+22:35:27 16.07.2023 Issue Page: DEBUG- [0;33mPage object of Issue PagegitHubTest.IssuePage[0m
+22:35:28 16.07.2023 Issue Page: DEBUG- [0;33mUser is on the Issue page[0m
+22:35:28 16.07.2023 Issue Create Page: DEBUG- [0;33mPage object of Issue Create PagegitHubTest.IssueCreatePage[0m
+22:36:03 16.07.2023 Home page: DEBUG- [0;33mPage object of Home pagegitHubTest.HomePage[0m
+22:36:03 16.07.2023 Home page: DEBUG- [0;33mUser is on Login page[0m
+22:36:03 16.07.2023 Login Page: DEBUG- [0;33mPage object of Login PagegitHubTest.LoginPage[0m
+22:36:05 16.07.2023 Login Page: INFO - Successful authorization
+22:36:05 16.07.2023 Login Page: ERROR- [0;31mUser successfully  log in[0m
+22:36:05 16.07.2023 Main Page: DEBUG- [0;33mPage object of Main PagegitHubTest.MainPage[0m
+22:36:10 16.07.2023 Main Page: DEBUG- [0;33mThe user is redirecting on the Repository page[0m
+22:36:10 16.07.2023 Repository Page: DEBUG- [0;33mPage object of Repository PagegitHubTest.RepositoryPage[0m
+22:36:10 16.07.2023 Repository Page: DEBUG- [0;33mThe user is go back to Issue page[0m
+22:36:10 16.07.2023 Issue Page: DEBUG- [0;33mPage object of Issue PagegitHubTest.IssuePage[0m
+22:36:11 16.07.2023 Issue Page: DEBUG- [0;33mUser is on the Issue page[0m
+22:36:11 16.07.2023 Issue Create Page: DEBUG- [0;33mPage object of Issue Create PagegitHubTest.IssueCreatePage[0m
