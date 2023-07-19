@@ -15,6 +15,7 @@ public class BaseTest {
     @BeforeEach
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\WellDone\\IdeaProjects\\gitHubTest\\src\\main\\resources\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\DOCKERV2\\gitHubTest\\src\\main\\resources\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
