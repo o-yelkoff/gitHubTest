@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GitHubAUTTest extends BaseTest {
     private static Logger log = Logger.getLogger(GitHubAUTTest.class.getName());
+
     @Test
     public void goToIssiePageTest() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
@@ -21,7 +22,6 @@ public class GitHubAUTTest extends BaseTest {
         Assertions.assertTrue(issuePage.isPageOpened());
         IssueCreatePage issueCreatePage = issuePage.goToIssueCreatePage();
         Assertions.assertTrue(issueCreatePage.issueCreatePageIsOpen());
-
     }
 
     @Test
@@ -63,5 +63,4 @@ public class GitHubAUTTest extends BaseTest {
         issueDeletePage.deletingIssue();
         Assertions.assertTrue(issueCreatePage.issueDeletingNotification());
     }
-
 }
