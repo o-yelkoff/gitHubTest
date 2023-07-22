@@ -1,12 +1,11 @@
 package gitHubTest;
 
 import helpers.Level;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import static helpers.logColorPrinter.printColorMessage;
+import static org.testng.Assert.assertEquals;
 
 public class LoginPage extends BasePage{
     private By logoLocator = By.className("header-logo");
@@ -25,7 +24,7 @@ public class LoginPage extends BasePage{
     }
 
     public LoginPage validateErrorMessage(String expectedMessage) {
-        Assertions.assertEquals(expectedMessage, driver.findElement(errorTextLocator).getText());
+        assertEquals(expectedMessage, driver.findElement(errorTextLocator).getText());
         return this;
     }
 

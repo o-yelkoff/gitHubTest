@@ -2,7 +2,6 @@ package gitHubTest;
 
 import helpers.Level;
 import net.bytebuddy.implementation.bytecode.Throw;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;

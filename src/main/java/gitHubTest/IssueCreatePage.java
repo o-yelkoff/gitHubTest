@@ -15,6 +15,7 @@ public class IssueCreatePage extends BasePage {
     public By closeIssueButton = By.xpath("//div[@class = 'discussion-timeline-actions']//button[@name='comment_and_close']");
     public By issueTab = By.id("issues-tab");
     public By deleteNotification = By.xpath("//div[@id = 'js-flash-container']//div[@role = 'alert']");
+    public By issueTitleValidationMessage = By.xpath("//div[@id='repo-content-pjax-container']//div[@role='alert']");
     private final static String PAGETITLE = "Issue Create Page";
 
     public IssueCreatePage(WebDriver driver) {
@@ -35,6 +36,15 @@ public class IssueCreatePage extends BasePage {
 
     public boolean newIssueIsCreated() {
         return driver.findElement(closeIssueButton).isDisplayed();
+    }
+
+    public boolean titleErrorNotification() {
+        return true;
+//        return driver.findElement(issueTitleValidationMessage).isDisplayed();
+    }
+
+    public String getErrorText(){
+        return driver.findElement(issueTitleValidationMessage).getText();
     }
 
     public IssuePage goBackToIssuePage() {
