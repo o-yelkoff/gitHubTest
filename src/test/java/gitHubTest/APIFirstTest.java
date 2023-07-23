@@ -2,8 +2,9 @@ package gitHubTest;
 
 import apiTests.BaseAPITest;
 import io.restassured.http.ContentType;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
 
 import java.io.File;
 import java.util.HashMap;
@@ -18,7 +19,7 @@ public class APIFirstTest extends BaseAPITest {
     private String API_KEY = "ac3ae531e9fea0c8f439cd51bc5b015e";
     Map<String, Object> requestBody = new HashMap<>();
 
-    @BeforeEach
+    @BeforeMethod
     public void setRequestBody() {
 
         HashMap<String, String> methodProperties = new HashMap<>();
